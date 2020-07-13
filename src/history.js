@@ -1,4 +1,4 @@
-export default class History {
+class History {
   constructor() {
     this.transactions = [];
   }
@@ -23,3 +23,5 @@ export default class History {
     return integer.toFixed(2);
   }
 }
+
+module.exports = History;

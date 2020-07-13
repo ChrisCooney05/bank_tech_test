@@ -1,6 +1,6 @@
-import History from "./history";
+const History = require("./history");
 
-export default class Bank {
+class Bank {
   constructor(history = new History()) {
     this.balance = 0;
     this.history = history;
@@ -15,4 +15,10 @@ export default class Bank {
     this.balance -= funds;
     this.history.withdraw(date, funds, this.balance);
   }
+
+  returnHistory() {
+    return this.history.returnTransactionHistory();
+  }
 }
+
+module.exports = Bank;

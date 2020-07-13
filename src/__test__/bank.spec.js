@@ -1,5 +1,5 @@
-import Bank from "../bank";
-import History from "../history";
+const Bank = require("../bank");
+const History = require("../history");
 jest.mock("../history");
 
 describe("Bank", () => {
@@ -39,5 +39,16 @@ describe("Bank", () => {
     expect(balance).toEqual(750);
     expect(withdrawMock).toHaveBeenCalledTimes(1);
     expect(withdrawMock).toHaveBeenCalledWith("10/02/2020", 250, balance);
+  });
+
+  test("There is a way to retrieve a full history through the Bank class", () => {
+    bank = new Bank();
+    bank.deposit("10/01/2020", 1000);
+    bank.withdraw("10/02/2020", 250);
+    console.log(bank.returnHistory());
+    expect(bank.returnHistory()).toEqual([
+      ["10/01/2020", "1000.00", "", "1000.00"],
+      ["10/02/2020", "", "250.00", "750.00"],
+    ]);
   });
 });

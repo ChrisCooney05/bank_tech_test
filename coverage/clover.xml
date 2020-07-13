@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594652054133" clover="3.2.0">
-  <project timestamp="1594652054134" name="All files">
-    <metrics statements="15" coveredstatements="15" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8" elements="24" coveredelements="24" complexity="0" loc="15" ncloc="15" packages="1" files="2" classes="2"/>
+<coverage generated="1594654767897" clover="3.2.0">
+  <project timestamp="1594654767898" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="9" coveredmethods="9" elements="29" coveredelements="29" complexity="0" loc="19" ncloc="19" packages="1" files="2" classes="2"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
-      <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-      <line num="5" count="4" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
+      <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
     </file>
     <file name="history.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/history.js">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <line num="3" count="5" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
       <line num="8" count="2" type="stmt"/>
@@ -22,6 +25,7 @@
       <line num="15" count="2" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
       <line num="23" count="9" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
