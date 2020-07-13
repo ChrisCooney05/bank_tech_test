@@ -45,10 +45,8 @@ describe("Bank", () => {
     bank = new Bank();
     bank.deposit("10/01/2020", 1000);
     bank.withdraw("10/02/2020", 250);
+    const historyMock = History.mock.instances[0].returnTransactionHistory;
     console.log(bank.returnHistory());
-    expect(bank.returnHistory()).toEqual([
-      ["10/01/2020", "1000.00", "", "1000.00"],
-      ["10/02/2020", "", "250.00", "750.00"],
-    ]);
+    expect(historyMock).toHaveBeenCalledTimes(1);
   });
 });
