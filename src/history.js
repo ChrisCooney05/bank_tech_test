@@ -7,8 +7,8 @@ export default class History {
     this.transactions.push([date, funds]);
   }
 
-  withdraw(funds) {
-    this.transactions.push([funds]);
+  withdraw(date, funds) {
+    this.transactions.push([date, funds]);
   }
 
   returnTransactionHistory() {
