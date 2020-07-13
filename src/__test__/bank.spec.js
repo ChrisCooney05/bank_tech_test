@@ -32,6 +32,8 @@ describe("Bank", () => {
     bank = new Bank();
     bank.deposit(1000);
     bank.withdraw(500);
+    const withdrawMock = History.mock.instances[0].withdraw;
     expect(bank.balance).toEqual(500);
+    expect(withdrawMock).toHaveBeenCalledTimes(1);
   });
 });
