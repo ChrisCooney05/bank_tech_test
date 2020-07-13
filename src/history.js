@@ -3,12 +3,12 @@ export default class History {
     this.transactions = [];
   }
 
-  deposit(date, funds) {
-    this.transactions.push([date, funds]);
+  deposit(date, funds, balance) {
+    this.transactions.push([date, funds, balance]);
   }
 
-  withdraw(date, funds) {
-    this.transactions.push([date, funds]);
+  withdraw(date, funds, balance) {
+    this.transactions.push([date, funds, balance]);
   }
 
   returnTransactionHistory() {
