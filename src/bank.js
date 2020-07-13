@@ -1,7 +1,10 @@
+import History from "./history";
+
 export default class Bank {
-  constructor() {
+  constructor(history = new History()) {
     this.balance = 0;
-    this.history = [];
+    console.log(history);
+    this.history = history;
   }
 
   deposit(funds) {

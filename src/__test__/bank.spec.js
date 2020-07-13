@@ -1,10 +1,13 @@
 import Bank from "../bank";
+import History from "../history";
+jest.mock("../history");
 
 describe("Bank", () => {
   let bank;
 
   beforeEach(() => {
     bank = new Bank();
+    History.mockClear();
   });
 
   test("Bank is constructed with a 0 balance", () => {
@@ -12,7 +15,7 @@ describe("Bank", () => {
   });
 
   test("Bank is constructed with an empty array to store history", () => {
-    expect(bank.history).toEqual([]);
+    expect(bank.history).toBeInstanceOf(History);
   });
 
   test("user can deposit money into the account", () => {
