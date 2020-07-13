@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/ChrisCooney05/bank_tech_test#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "jest": "^26.1.0"
+  },
+  "jest": {
+    "verbose": true
   }
 }
