@@ -1,6 +1,7 @@
 const Bank = require("../bank");
 const History = require("../history");
 jest.mock("../history");
+const mMock = jest.fn();
 
 describe("Bank", () => {
   let bank;
@@ -45,8 +46,14 @@ describe("Bank", () => {
     bank = new Bank();
     bank.deposit("10/01/2020", 1000);
     bank.withdraw("10/02/2020", 250);
+    bank.returnHistory();
     const historyMock = History.mock.instances[0].returnTransactionHistory;
-    console.log(bank.returnHistory());
     expect(historyMock).toHaveBeenCalledTimes(1);
   });
 });
+
+// History.mockImplementation(() => {
+//   return {
+//     returnTransactionHistory: mMock,
+//   };
+// });

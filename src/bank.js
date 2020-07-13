@@ -1,4 +1,4 @@
-const History = require("./history");
+const History = require("./history.js");
 
 class Bank {
   constructor(history = new History()) {
