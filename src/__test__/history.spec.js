@@ -39,4 +39,8 @@ describe("History", () => {
       ["10/02/2020", "", "250.00", "750.00"],
     ]);
   });
+
+  test("Has a method to convert number to string with two decimal places", () => {
+    expect(history.formatInteger(1000)).toEqual("1000.00");
+  });
 });
