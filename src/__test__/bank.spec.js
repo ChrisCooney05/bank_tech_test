@@ -24,18 +24,20 @@ describe("Bank", () => {
     bank = new Bank();
     bank.deposit("10/01/2020", 1000);
     const depositMock = History.mock.instances[0].deposit;
-    expect(bank.balance).toBe(1000);
+    const balance = bank.balance;
+    expect(balance).toBe(1000);
     expect(depositMock).toHaveBeenCalledTimes(1);
-    expect(depositMock).toHaveBeenCalledWith("10/01/2020", 1000);
+    expect(depositMock).toHaveBeenCalledWith("10/01/2020", 1000, balance);
   });
 
   test("User can make a withdrawal from the bank", () => {
     bank = new Bank();
     bank.deposit("10/01/2020", 1000);
-    bank.withdraw("10/02/2020", 500);
+    bank.withdraw("10/02/2020", 250);
     const withdrawMock = History.mock.instances[0].withdraw;
-    expect(bank.balance).toEqual(500);
+    const balance = bank.balance;
+    expect(balance).toEqual(750);
     expect(withdrawMock).toHaveBeenCalledTimes(1);
-    expect(withdrawMock).toHaveBeenCalledWith("10/02/2020", 500);
+    expect(withdrawMock).toHaveBeenCalledWith("10/02/2020", 250, balance);
   });
 });

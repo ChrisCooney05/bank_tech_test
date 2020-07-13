@@ -8,11 +8,11 @@ export default class Bank {
 
   deposit(date, funds) {
     this.balance += funds;
-    this.history.deposit(date, funds);
+    this.history.deposit(date, funds, this.balance);
   }
 
   withdraw(date, funds) {
     this.balance -= funds;
-    this.history.withdraw(date, funds);
+    this.history.withdraw(date, funds, this.balance);
   }
 }
