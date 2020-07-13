@@ -20,4 +20,10 @@ describe("History", () => {
     history.withdraw(500);
     expect(history.transactions[0]).toEqual([500]);
   });
+
+  test("Returns full transaction history as an array of arrays", () => {
+    history.deposit(1000);
+    history.withdraw(250);
+    expect(history.returnTransactionHistory()).toEqual([[1000], [250]]);
+  });
 });

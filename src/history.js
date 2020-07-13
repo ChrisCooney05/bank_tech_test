@@ -10,4 +10,8 @@ export default class History {
   withdraw(funds) {
     this.transactions.push([funds]);
   }
+
+  returnTransactionHistory() {
+    return this.transactions;
+  }
 }
