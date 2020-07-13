@@ -6,9 +6,9 @@ export default class Bank {
     this.history = history;
   }
 
-  deposit(funds) {
+  deposit(date, funds) {
     this.balance += funds;
-    this.history.deposit(funds);
+    this.history.deposit(date, funds);
   }
 
   withdraw(funds) {
