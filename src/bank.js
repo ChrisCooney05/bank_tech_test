@@ -11,8 +11,8 @@ export default class Bank {
     this.history.deposit(date, funds);
   }
 
-  withdraw(funds) {
+  withdraw(date, funds) {
     this.balance -= funds;
-    this.history.withdraw(funds);
+    this.history.withdraw(date, funds);
   }
 }

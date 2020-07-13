@@ -32,9 +32,10 @@ describe("Bank", () => {
   test("User can make a withdrawal from the bank", () => {
     bank = new Bank();
     bank.deposit("10/01/2020", 1000);
-    bank.withdraw(500);
+    bank.withdraw("10/02/2020", 500);
     const withdrawMock = History.mock.instances[0].withdraw;
     expect(bank.balance).toEqual(500);
     expect(withdrawMock).toHaveBeenCalledTimes(1);
+    expect(withdrawMock).toHaveBeenCalledWith("10/02/2020", 500);
   });
 });
