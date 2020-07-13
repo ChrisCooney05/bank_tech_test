@@ -4,11 +4,11 @@ export default class Bank {
     this.history = [];
   }
 
-  deposit(num) {
-    this.balance += num;
+  deposit(funds) {
+    this.balance += funds;
   }
 
-  withdraw(num) {
-    this.balance -= num;
+  withdraw(funds) {
+    this.balance -= funds;
   }
 }
