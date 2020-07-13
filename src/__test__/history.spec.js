@@ -15,4 +15,9 @@ describe("History", () => {
     history.deposit(1000);
     expect(history.transactions[0]).toEqual([1000]);
   });
+
+  test("Adds transaction to history when a withdrawal is made", () => {
+    history.withdraw(500);
+    expect(history.transactions[0]).toEqual([500]);
+  });
 });

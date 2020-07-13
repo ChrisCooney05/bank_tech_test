@@ -6,4 +6,8 @@ export default class History {
   deposit(funds) {
     this.transactions.push([funds]);
   }
+
+  withdraw(funds) {
+    this.transactions.push([funds]);
+  }
 }
