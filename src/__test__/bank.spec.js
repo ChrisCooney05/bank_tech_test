@@ -7,8 +7,12 @@ describe("Bank", () => {
     bank = new Bank();
   });
 
-  test("bank can be constructed with a 0 balance", () => {
+  test("Bank is constructed with a 0 balance", () => {
     expect(bank.balance).toBe(0);
+  });
+
+  test("Bank is constructed with an empty array to store history", () => {
+    expect(bank.history).toEqual([]);
   });
 
   test("user can deposit money into the account", () => {
