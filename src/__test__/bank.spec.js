@@ -6,24 +6,30 @@ describe("Bank", () => {
   let bank;
 
   beforeEach(() => {
-    bank = new Bank();
     History.mockClear();
   });
 
   test("Bank is constructed with a 0 balance", () => {
-    expect(bank.balance).toBe(0);
+    bank = new Bank();
+    expect(bank.balance).toEqual(0);
   });
 
-  test("Bank is constructed with an empty array to store history", () => {
+  test("Bank is constructed with an instance of History", () => {
+    bank = new Bank();
     expect(bank.history).toBeInstanceOf(History);
+    expect(History).toHaveBeenCalledTimes(1);
   });
 
   test("user can deposit money into the account", () => {
+    bank = new Bank();
     bank.deposit(1000);
+    const depositMock = History.mock.instances[0].deposit;
     expect(bank.balance).toBe(1000);
+    expect(depositMock).toHaveBeenCalledTimes(1);
   });
 
   test("User can make a withdrawal from the bank", () => {
+    bank = new Bank();
     bank.deposit(1000);
     bank.withdraw(500);
     expect(bank.balance).toEqual(500);
