@@ -19,4 +19,10 @@ describe("Bank", () => {
     bank.deposit(1000);
     expect(bank.balance).toBe(1000);
   });
+
+  test("User can make a withdrawal from the bank", () => {
+    bank.deposit(1000);
+    bank.withdraw(500);
+    expect(bank.balance).toEqual(500);
+  });
 });

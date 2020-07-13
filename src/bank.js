@@ -7,4 +7,8 @@ export default class Bank {
   deposit(num) {
     this.balance += num;
   }
+
+  withdraw(num) {
+    this.balance -= num;
+  }
 }
