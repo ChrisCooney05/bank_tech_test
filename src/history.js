@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 class History {
   constructor() {
     this.transactions = [];

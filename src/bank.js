@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const History = require("./history.js");
 
 class Bank {
