@@ -1,5 +1,5 @@
-const Bank = require("../bank");
-const History = require("../history");
+import Bank from "../bank";
+import History from "../history";
 jest.mock("../history");
 const mMock = jest.fn();
 
