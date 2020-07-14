@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-unused-vars
+const History = require("./src/history");
+
 class Bank {
   constructor(history = new History()) {
     this.balance = 0;
@@ -22,6 +23,14 @@ class Bank {
     return this.history.returnTransactionHistory();
   }
 
+  getDate() {
+    let t = new Date();
+    let dd = t.getDate();
+    let mm = t.getMonth() + 1;
+    let yy = t.getFullYear();
+    return `${dd}/${mm}/${yy}`;
+  }
+
   statement() {
     let result = [];
     let fullHistory = this.returnHistory();
@@ -31,12 +40,6 @@ class Bank {
     result = result.join("");
     console.log(`${this.STATEMENT_HEADER}${result}`);
   }
-
-  getDate() {
-    let t = new Date();
-    let dd = t.getDate();
-    let mm = t.getMonth();
-    let yy = t.getFullYear();
-    return `${dd}/${mm}/${yy}`;
-  }
 }
+
+module.exports = Bank;

@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const History = require("./history.js");
+const History = require("./history");
 
 class Bank {
   constructor(history = new History()) {
@@ -27,7 +27,7 @@ class Bank {
   getDate() {
     let t = new Date();
     let dd = t.getDate();
-    let mm = t.getMonth();
+    let mm = t.getMonth() + 1;
     let yy = t.getFullYear();
     return `${dd}/${mm}/${yy}`;
   }

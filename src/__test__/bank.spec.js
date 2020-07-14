@@ -9,7 +9,7 @@ describe("Bank", () => {
   function getDate() {
     let t = new Date();
     let dd = t.getDate();
-    let mm = t.getMonth();
+    let mm = t.getMonth() + 1;
     let yy = t.getFullYear();
     return `${dd}/${mm}/${yy}`;
   }
