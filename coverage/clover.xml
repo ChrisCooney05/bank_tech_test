@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594720491009" clover="3.2.0">
-  <project timestamp="1594720491009" name="All files">
+<coverage generated="1594721181637" clover="3.2.0">
+  <project timestamp="1594721181639" name="All files">
     <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="9" coveredmethods="9" elements="26" coveredelements="26" complexity="0" loc="16" ncloc="16" packages="1" files="2" classes="2"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
       <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
