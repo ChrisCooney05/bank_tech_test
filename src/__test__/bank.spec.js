@@ -24,6 +24,11 @@ describe("Bank", () => {
     expect(bank.balance).toEqual(0);
   });
 
+  test("Has a function to return the current balance", () => {
+    bank = new Bank();
+    expect(bank.currentBalance()).toEqual(0);
+  });
+
   test("Bank is constructed with an instance of History", () => {
     bank = new Bank();
     expect(bank.history).toBeInstanceOf(History);

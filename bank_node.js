@@ -8,16 +8,22 @@ class Bank {
     this.STATEMENT_HEADER = "Date || Credit || Debit || Balance";
   }
 
+  currentBalance() {
+    return this.balance;
+  }
+
   deposit(funds) {
     this.balance += funds;
     let date = this.getDate();
-    this.history.deposit(date, funds, this.balance);
+    let balance = this.currentBalance();
+    this.history.deposit(date, funds, balance);
   }
 
   withdraw(funds) {
     this.balance -= funds;
     let date = this.getDate();
-    this.history.withdraw(date, funds, this.balance);
+    let balance = this.currentBalance();
+    this.history.withdraw(date, funds, balance);
   }
 
   returnHistory() {
@@ -42,6 +48,5 @@ class Bank {
     console.log(`${this.STATEMENT_HEADER}${result}`);
   }
 }
-
 // eslint-disable-next-line no-unused-vars
 let bank = new Bank();
