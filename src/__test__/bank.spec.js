@@ -1,7 +1,6 @@
-import Bank from "../bank";
-import History from "../history";
+const Bank = require("../bank");
+const History = require("../history");
 jest.mock("../history");
-// const mMock = jest.fn();
 
 describe("Bank", () => {
   let bank;

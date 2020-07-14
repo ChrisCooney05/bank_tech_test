@@ -24,4 +24,4 @@ class History {
   }
 }
 
-export default History;
+module.exports = History;

@@ -1,4 +1,4 @@
-import History from "./history.js";
+const History = require("./history.js");
 
 class Bank {
   constructor(history = new History()) {
@@ -42,4 +42,4 @@ class Bank {
   }
 }
 
-export default Bank;
+module.exports = Bank;

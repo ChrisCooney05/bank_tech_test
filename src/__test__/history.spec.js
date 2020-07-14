@@ -1,4 +1,4 @@
-import History from "../history";
+const History = require("../history");
 
 describe("History", () => {
   let history;
