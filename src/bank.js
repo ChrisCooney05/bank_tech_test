@@ -6,18 +6,28 @@ class Bank {
     this.history = history;
   }
 
-  deposit(date, funds) {
+  deposit(funds) {
     this.balance += funds;
+    let date = this.getDate();
     this.history.deposit(date, funds, this.balance);
   }
 
-  withdraw(date, funds) {
+  withdraw(funds) {
     this.balance -= funds;
+    let date = this.getDate();
     this.history.withdraw(date, funds, this.balance);
   }
 
   returnHistory() {
     return this.history.returnTransactionHistory();
+  }
+
+  getDate() {
+    let t = new Date();
+    let dd = t.getDate();
+    let mm = t.getMonth();
+    let yy = t.getFullYear();
+    return `${dd}/${mm}/${yy}`;
   }
 }
 
