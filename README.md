@@ -25,10 +25,18 @@ if you would like to view the test files they can be seen [here](src/__test__).
 If you would like to try the code in the console:
 
 1. Clone this repository
-2. Open bank.html in the browser
+2. Use the following commands
 
 ```
-open bank.html
+npm install
+node
+.load bank_node.js
 ```
 
-3. open the javascript console in the browser( cmd + opt + j)
+This will load up the REPL and load the bank file, you can then use the following commands to use the bank.
+
+```
+bank.deposit(add_number_here)
+bank.withdraw(add_number_here)
+bank.statement()
+```

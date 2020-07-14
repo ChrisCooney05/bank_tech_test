@@ -1,5 +1,6 @@
 const History = require("./src/history");
 
+// eslint-disable-next-line no-unused-vars
 class Bank {
   constructor(history = new History()) {
     this.balance = 0;
@@ -42,4 +43,5 @@ class Bank {
   }
 }
 
-module.exports = Bank;
+// eslint-disable-next-line no-unused-vars
+let bank = new Bank();
