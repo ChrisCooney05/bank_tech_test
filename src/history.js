@@ -4,23 +4,23 @@ class History {
     this.transactions = [];
   }
 
-  deposit(date, funds, balance) {
-    let fundsFloat = this.formatInteger(funds);
-    let balanceFloat = this.formatInteger(balance);
+  _deposit(date, funds, balance) {
+    let fundsFloat = this._formatInteger(funds);
+    let balanceFloat = this._formatInteger(balance);
     this.transactions.push([date, fundsFloat, "", balanceFloat]);
   }
 
-  withdraw(date, funds, balance) {
-    let fundsFloat = this.formatInteger(funds);
-    let balanceFloat = this.formatInteger(balance);
+  _withdraw(date, funds, balance) {
+    let fundsFloat = this._formatInteger(funds);
+    let balanceFloat = this._formatInteger(balance);
     this.transactions.push([date, "", fundsFloat, balanceFloat]);
   }
 
-  returnTransactionHistory() {
+  _returnTransactionHistory() {
     return this.transactions;
   }
 
-  formatInteger(integer) {
+  _formatInteger(integer) {
     return integer.toFixed(2);
   }
 }

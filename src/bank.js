@@ -14,23 +14,23 @@ class Bank {
 
   deposit(funds) {
     this.balance += funds;
-    let date = this.getDate();
+    let date = this._getDate();
     let balance = this.currentBalance();
-    this.history.deposit(date, funds, balance);
+    this.history._deposit(date, funds, balance);
   }
 
   withdraw(funds) {
     this.balance -= funds;
-    let date = this.getDate();
+    let date = this._getDate();
     let balance = this.currentBalance();
-    this.history.withdraw(date, funds, balance);
+    this.history._withdraw(date, funds, balance);
   }
 
-  returnHistory() {
-    return this.history.returnTransactionHistory();
+  _returnHistory() {
+    return this.history._returnTransactionHistory();
   }
 
-  getDate() {
+  _getDate() {
     let t = new Date();
     let dd = t.getDate();
     let mm = t.getMonth() + 1;
@@ -40,7 +40,7 @@ class Bank {
 
   statement() {
     let result = [];
-    let fullHistory = this.returnHistory();
+    let fullHistory = this._returnHistory();
     fullHistory.forEach((t) => {
       result.push(`\n${t[0]} || ${t[1]} || ${t[2]} || ${t[3]}`);
     });
