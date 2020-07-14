@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594723609509" clover="3.2.0">
-  <project timestamp="1594723609509" name="All files">
+<coverage generated="1594725318078" clover="3.2.0">
+  <project timestamp="1594725318078" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="1" methods="11" coveredmethods="11" elements="37" coveredelements="37" complexity="0" loc="25" ncloc="25" packages="1" files="2" classes="2"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
       <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="6" count="5" type="stmt"/>
-      <line num="7" count="5" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
       <line num="11" count="3" type="stmt"/>
       <line num="12" count="3" type="stmt"/>
       <line num="13" count="3" type="stmt"/>

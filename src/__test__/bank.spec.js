@@ -60,12 +60,17 @@ describe("Bank", () => {
   });
 
   test("There is a way to retrieve a full history through the Bank class formatted correctly", () => {
+    bank = new Bank();
     bank.deposit(1000);
     bank.withdraw(250);
+    console.log = jest.fn();
     jest.spyOn(bank, "returnHistory").mockImplementation(() => [
       [date, "1000.00", "", "1000.00"],
       [date, "", "250.00", "750.00"],
     ]);
-    expect(bank.statement()).toEqual(`Date || Credit || Debit || Balance`);
+    bank.statement();
+    expect(console.log).toHaveBeenCalledWith(
+      "Date || Credit || Debit || Balance"
+    );
   });
 });

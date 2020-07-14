@@ -32,7 +32,7 @@ class Bank {
   }
 
   statement() {
-    return this.STATEMENT_HEADER;
+    console.log(`${this.STATEMENT_HEADER}`);
   }
 }
 
