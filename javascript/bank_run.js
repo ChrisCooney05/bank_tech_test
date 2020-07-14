@@ -22,15 +22,21 @@ class Bank {
     return this.history.returnTransactionHistory();
   }
 
+  statement() {
+    let result = [];
+    let fullHistory = this.returnHistory();
+    fullHistory.forEach((t) => {
+      result.push(`\n${t[0]} || ${t[1]} || ${t[2]} || ${t[3]}`);
+    });
+    result = result.join("");
+    console.log(`${this.STATEMENT_HEADER}${result}`);
+  }
+
   getDate() {
     let t = new Date();
     let dd = t.getDate();
     let mm = t.getMonth();
     let yy = t.getFullYear();
     return `${dd}/${mm}/${yy}`;
-  }
-
-  statement() {
-    return this.STATEMENT_HEADER;
   }
 }
