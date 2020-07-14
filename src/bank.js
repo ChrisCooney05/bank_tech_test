@@ -32,7 +32,13 @@ class Bank {
   }
 
   statement() {
-    console.log(`${this.STATEMENT_HEADER}`);
+    let result = [];
+    let fullHistory = this.returnHistory();
+    fullHistory.forEach((t) => {
+      result.push(`\n${t[0]} || ${t[1]} || ${t[2]} || ${t[3]}`);
+    });
+    result = result.join("");
+    console.log(`${this.STATEMENT_HEADER}${result}`);
   }
 }
 
