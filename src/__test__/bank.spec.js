@@ -62,13 +62,10 @@ describe("Bank", () => {
   test("There is a way to retrieve a full history through the Bank class formatted correctly", () => {
     bank.deposit(1000);
     bank.withdraw(250);
-    let spy = jest.spyOn(bank, "returnHistory").mockImplementation(() => [
+    jest.spyOn(bank, "returnHistory").mockImplementation(() => [
       [date, "1000.00", "", "1000.00"],
       [date, "", "250.00", "750.00"],
     ]);
-    expect(bank.returnHistory()).toEqual([
-      [date, "1000.00", "", "1000.00"],
-      [date, "", "250.00", "750.00"],
-    ]);
+    expect(bank.statement()).toEqual(`Date || Credit || Debit || Balance`);
   });
 });

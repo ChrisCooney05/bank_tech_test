@@ -4,6 +4,7 @@ class Bank {
   constructor(history = new History()) {
     this.balance = 0;
     this.history = history;
+    this.STATEMENT_HEADER = "Date || Credit || Debit || Balance";
   }
 
   deposit(funds) {
@@ -28,6 +29,10 @@ class Bank {
     let mm = t.getMonth();
     let yy = t.getFullYear();
     return `${dd}/${mm}/${yy}`;
+  }
+
+  statement() {
+    return this.STATEMENT_HEADER;
   }
 }
 
