@@ -39,13 +39,18 @@ class Bank {
   }
 
   statement() {
+    let result = this._formatHistory();
+    result = result.join("");
+    console.log(`${this.STATEMENT_HEADER}${result}`);
+  }
+
+  _formatHistory() {
     let result = [];
     let fullHistory = this._returnHistory();
     fullHistory.forEach((t) => {
       result.push(`\n${t[0]} || ${t[1]} || ${t[2]} || ${t[3]}`);
     });
-    result = result.join("");
-    console.log(`${this.STATEMENT_HEADER}${result}`);
+    return result;
   }
 }
 // eslint-disable-next-line no-unused-vars
