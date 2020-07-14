@@ -52,18 +52,23 @@ describe("Bank", () => {
     expect(withdrawMock).toHaveBeenCalledWith(date, 250, balance);
   });
 
-  test("There is a way to retrieve a full history through the Bank class", () => {
+  test("Should call method from History class when requesting full history", () => {
     bank = new Bank();
-    bank.deposit(1000);
-    bank.withdraw(250);
     bank.returnHistory();
     const historyMock = History.mock.instances[0].returnTransactionHistory;
     expect(historyMock).toHaveBeenCalledTimes(1);
   });
-});
 
-// History.mockImplementation(() => {
-//   return {
-//     returnTransactionHistory: mMock,
-//   };
-// });
+  test("There is a way to retrieve a full history through the Bank class formatted correctly", () => {
+    bank.deposit(1000);
+    bank.withdraw(250);
+    let spy = jest.spyOn(bank, "returnHistory").mockImplementation(() => [
+      [date, "1000.00", "", "1000.00"],
+      [date, "", "250.00", "750.00"],
+    ]);
+    expect(bank.returnHistory()).toEqual([
+      [date, "1000.00", "", "1000.00"],
+      [date, "", "250.00", "750.00"],
+    ]);
+  });
+});
