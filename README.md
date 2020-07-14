@@ -40,3 +40,13 @@ bank.deposit(add_number_here)
 bank.withdraw(add_number_here)
 bank.statement()
 ```
+
+![preview](public/bank.gif)
+
+## My approach
+
+For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.
+
+I decided to go with two classes, one to represent the Bank and one to hold the transaction history.
+The Bank class is the main controller where a user can deposit, withdraw and request statements, it also tracks the current balance.
+The History class is responsible for storing arrays with information regarding transactions. The user just needs to specify how much is being withdrawn or deposited and the program does the rest (captures a date stamp, formats the input so we have a number with two decimal places and formats the array input accordingly).
