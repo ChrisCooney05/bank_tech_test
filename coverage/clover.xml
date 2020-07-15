@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594825828855" clover="3.2.0">
-  <project timestamp="1594825828855" name="All files">
-    <metrics statements="51" coveredstatements="51" conditionals="1" coveredconditionals="1" methods="20" coveredmethods="20" elements="72" coveredelements="72" complexity="0" loc="51" ncloc="51" packages="1" files="3" classes="3"/>
+<coverage generated="1594825903795" clover="3.2.0">
+  <project timestamp="1594825903795" name="All files">
+    <metrics statements="52" coveredstatements="52" conditionals="1" coveredconditionals="1" methods="21" coveredmethods="21" elements="74" coveredelements="74" complexity="0" loc="52" ncloc="52" packages="1" files="3" classes="3"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
       <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
       <line num="2" count="2" type="stmt"/>
@@ -51,16 +51,17 @@
       <line num="51" count="3" type="stmt"/>
     </file>
     <file name="transaction.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/transaction.js">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-      <line num="3" count="10" type="stmt"/>
-      <line num="4" count="10" type="stmt"/>
-      <line num="5" count="10" type="stmt"/>
-      <line num="6" count="10" type="stmt"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <line num="3" count="11" type="stmt"/>
+      <line num="4" count="11" type="stmt"/>
+      <line num="5" count="11" type="stmt"/>
+      <line num="6" count="11" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="18" count="1" type="stmt"/>
-      <line num="22" count="3" type="stmt"/>
-      <line num="27" count="4" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="26" count="3" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
     </file>
   </project>
 </coverage>
