@@ -16,18 +16,18 @@ class Bank {
     this.balance += funds;
     let date = this._getDate();
     let balance = this.currentBalance();
-    this.history._deposit(date, funds, balance);
+    this.history.deposit(date, funds, balance);
   }
 
   withdraw(funds) {
     this.balance -= funds;
     let date = this._getDate();
     let balance = this.currentBalance();
-    this.history._withdraw(date, funds, balance);
+    this.history.withdraw(date, funds, balance);
   }
 
   _returnHistory() {
-    return this.history._returnTransactionHistory();
+    return this.history.returnTransactionHistory();
   }
 
   _getDate() {

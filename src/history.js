@@ -4,19 +4,19 @@ class History {
     this.transactions = [];
   }
 
-  _deposit(date, funds, balance) {
+  deposit(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
     this.transactions.push([date, fundsFloat, "", balanceFloat]);
   }
 
-  _withdraw(date, funds, balance) {
+  withdraw(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
     this.transactions.push([date, "", fundsFloat, balanceFloat]);
   }
 
-  _returnTransactionHistory() {
+  returnTransactionHistory() {
     return this.transactions;
   }
 

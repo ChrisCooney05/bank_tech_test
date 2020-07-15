@@ -38,7 +38,7 @@ describe("Bank", () => {
   test("user can deposit money into the account", () => {
     bank = new Bank();
     bank.deposit(1000);
-    const depositMock = History.mock.instances[0]._deposit;
+    const depositMock = History.mock.instances[0].deposit;
     const balance = bank.balance;
     expect(balance).toBe(1000);
     expect(depositMock).toHaveBeenCalledTimes(1);
@@ -49,7 +49,7 @@ describe("Bank", () => {
     bank = new Bank();
     bank.deposit(1000);
     bank.withdraw(250);
-    const withdrawMock = History.mock.instances[0]._withdraw;
+    const withdrawMock = History.mock.instances[0].withdraw;
     const balance = bank.balance;
     expect(balance).toEqual(750);
     expect(withdrawMock).toHaveBeenCalledTimes(1);
@@ -59,7 +59,7 @@ describe("Bank", () => {
   test("Should call method from History class when requesting full history", () => {
     bank = new Bank();
     bank._returnHistory();
-    const historyMock = History.mock.instances[0]._returnTransactionHistory;
+    const historyMock = History.mock.instances[0].returnTransactionHistory;
     expect(historyMock).toHaveBeenCalledTimes(1);
   });
 
