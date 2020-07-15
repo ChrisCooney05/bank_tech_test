@@ -1,2 +1,2 @@
 exclude:
-  - bank_node.js
+  - .*/bank_node\.js
