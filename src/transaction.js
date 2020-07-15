@@ -1,6 +1,6 @@
 class Transaction {
   constructor(date, credit, debit, balance) {
-    this.singleTransaction = [date, credit, debit, balance];
+    this.singleTransaction = `${date} || ${credit} || ${debit} || ${balance}`;
   }
 
   returnSingleTransaction() {
@@ -8,4 +8,5 @@ class Transaction {
   }
 }
 
+// eslint-disable-next-line no-undef
 module.exports = Transaction;
