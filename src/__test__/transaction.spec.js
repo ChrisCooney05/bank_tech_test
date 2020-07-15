@@ -10,4 +10,14 @@ describe("Transaction", () => {
       expect.arrayContaining(["date", "credit", "debit", "balance"])
     );
   });
+
+  test("Is able to return the array when called", () => {
+    transaction = new Transaction("date", "credit", "debit", "balance");
+    expect(transaction.returnSingleTransaction()).toEqual([
+      "date",
+      "credit",
+      "debit",
+      "balance",
+    ]);
+  });
 });
