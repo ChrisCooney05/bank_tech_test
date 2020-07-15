@@ -22,6 +22,10 @@ describe("Transaction", () => {
     expect(transaction.returnCredit()).toEqual("credit");
   });
 
+  test("Has a method to return the debit", () => {
+    expect(transaction.returnDebit()).toEqual("debit");
+  });
+
   test("Returns a formatted string when called", () => {
     expect(transaction.returnSingleTransaction()).toEqual(
       "date || credit || debit || balance"

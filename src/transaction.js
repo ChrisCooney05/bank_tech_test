@@ -14,6 +14,10 @@ class Transaction {
     return this.credit;
   }
 
+  returnDebit() {
+    return this.debit;
+  }
+
   returnSingleTransaction() {
     return this.singleTransaction;
   }
