@@ -17,6 +17,7 @@ describe("History", () => {
   beforeEach(() => {
     history = new History();
     date = getDate();
+    Transaction.mockClear();
   });
 
   test("History is constructed with an empty array", () => {
@@ -26,11 +27,13 @@ describe("History", () => {
   test("adds transaction to history when a deposit is made", () => {
     history.deposit(date, 1000, 1000);
     expect(history.transactions[0]).toBeInstanceOf(Transaction);
+    expect(Transaction).toHaveBeenCalledTimes(1);
   });
 
   test("Adds transaction to history when a withdrawal is made", () => {
     history.withdraw(date, 500, 500);
     expect(history.transactions[0]).toBeInstanceOf(Transaction);
+    expect(Transaction).toHaveBeenCalledTimes(1);
   });
 
   test("Returns full transaction history as an array of arrays", () => {
