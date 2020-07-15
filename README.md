@@ -1,4 +1,5 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/ChrisCooney05/bank_tech_test?branch=master)](https://bettercodehub.com/)
+![coverage](https://img.shields.io/badge/coverage-100%25-green)
 
 # Bank Tech Test
 
