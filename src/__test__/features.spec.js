@@ -11,4 +11,10 @@ describe("Bank", () => {
     bank.deposit(1000);
     expect(bank.currentBalance()).toEqual(1000);
   });
+
+  test("user can withdraw money from the bank and balance is tracked correctly", () => {
+    bank.deposit(1000);
+    bank.withdraw(500);
+    expect(bank.currentBalance()).toEqual(500);
+  });
 });
