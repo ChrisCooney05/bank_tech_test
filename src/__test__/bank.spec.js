@@ -59,7 +59,7 @@ describe("Bank", () => {
   test("Should call method from History class when requesting full history", () => {
     bank = new Bank();
     bank.statement();
-    const historyMock = History.mock.instances[0].returnStatement;
+    const historyMock = History.mock.instances[0].logStatement;
     expect(historyMock).toHaveBeenCalledTimes(1);
   });
 
