@@ -10,6 +10,10 @@ class Transaction {
     return this.date;
   }
 
+  returnCredit() {
+    return this.credit;
+  }
+
   returnSingleTransaction() {
     return this.singleTransaction;
   }
