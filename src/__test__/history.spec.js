@@ -1,4 +1,6 @@
 const History = require("../history");
+const Transaction = require("../transaction");
+jest.mock("../transaction");
 
 describe("History", () => {
   let history;
@@ -23,12 +25,12 @@ describe("History", () => {
 
   test("adds transaction to history when a deposit is made", () => {
     history.deposit(date, 1000, 1000);
-    expect(history.transactions[0]).toEqual([date, "1000.00", "", "1000.00"]);
+    expect(history.transactions[0]).toBeInstanceOf(Transaction);
   });
 
   test("Adds transaction to history when a withdrawal is made", () => {
     history.withdraw(date, 500, 500);
-    expect(history.transactions[0]).toEqual([date, "", "500.00", "500.00"]);
+    expect(history.transactions[0]).toBeInstanceOf(Transaction);
   });
 
   test("Returns full transaction history as an array of arrays", () => {

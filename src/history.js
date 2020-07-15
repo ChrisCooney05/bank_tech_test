@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+const Transaction = require("./transaction");
 class History {
   constructor() {
     this.transactions = [];
@@ -7,13 +8,15 @@ class History {
   deposit(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
-    this.transactions.push([date, fundsFloat, "", balanceFloat]);
+    let singleTransaction = new Transaction(date, fundsFloat, "", balanceFloat);
+    this.transactions.unshift(singleTransaction);
   }
 
   withdraw(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
-    this.transactions.push([date, "", fundsFloat, balanceFloat]);
+    let singleTransaction = new Transaction(date, "", fundsFloat, balanceFloat);
+    this.transactions.unshift(singleTransaction);
   }
 
   returnTransactionHistory() {
