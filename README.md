@@ -45,14 +45,14 @@ bank.statement()
 
 ## My approach
 
-For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.
+**For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.
 
 
 I decided to go with three classes:
 
-Bank: This is controller class that the user will interface with. This class is responsible for receiving user input(funds), updating the balance accordingly and producing a snapshot of the current date.
+**Bank:** This is controller class that the user will interface with. This class is responsible for receiving user input(funds), updating the balance accordingly and producing a snapshot of the current date.
 Once we have this information we pass it to the next class, History.
 
-History: This class is responsible for formatting some of the inputs and holding the full transaction history. On receipt of a deposit or withdrawal, the number is formatted into a string with two decimal places. it is also responsible to displaying a copy of the statement when requested by the user. Once all the information has been formatted it is stored in an instance of my next class, Transaction
+**History:** This class is responsible for formatting some of the inputs and holding the full transaction history. On receipt of a deposit or withdrawal, the number is formatted into a string with two decimal places. it is also responsible to displaying a copy of the statement when requested by the user. Once all the information has been formatted it is stored in an instance of my next class, Transaction
 
-Transaction: This class is here just to help keep things neat, instead of an array of arrays each instance of transaction holds a string. all arguments passed in are interpolated into a string and stored ready to be retrieved when needed.
+**Transaction:** This class is here just to help keep things neat, instead of an array of arrays each instance of transaction holds a string. all arguments passed in are interpolated into a string and stored ready to be retrieved when needed.
