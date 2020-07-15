@@ -24,7 +24,7 @@ class History {
     return this.transactions;
   }
 
-  pushStatementToArray() {
+  _pushStatementToArray() {
     let result = [];
     let fullHistory = this._returnTransactionHistory();
     fullHistory.forEach((t) => {
@@ -35,7 +35,7 @@ class History {
   }
 
   logStatement() {
-    let result = this.pushStatementToArray();
+    let result = this._pushStatementToArray();
     result = result.join("");
     console.log(`${this.STATEMENT_HEADER}${result}`);
   }

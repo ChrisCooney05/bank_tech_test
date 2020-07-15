@@ -50,7 +50,7 @@ describe("History", () => {
   test("There is a way to retrieve a full history and log it", () => {
     console.log = jest.fn();
     jest
-      .spyOn(history, "pushStatementToArray")
+      .spyOn(history, "_pushStatementToArray")
       .mockImplementation(() => [
         `\n${date} || 1000.00 ||  || 1000.00`,
         `\n${date} ||  || 250.00 || 750.00`,
