@@ -1,6 +1,6 @@
 class Transaction {
-  constructor() {
-    this.singleTransaction = [];
+  constructor(date, credit, debit, balance) {
+    this.singleTransaction = [date, credit, debit, balance];
   }
 }
 

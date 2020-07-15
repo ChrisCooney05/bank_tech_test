@@ -3,11 +3,11 @@ const Transaction = require("../transaction");
 describe("Transaction", () => {
   let transaction;
 
-  beforeEach(() => {
-    transaction = new Transaction();
-  });
-
-  test("The transaction class constructs with a an empty array", () => {
-    expect(transaction.singleTransaction).toEqual([]);
+  test("takes 4 arguments on construction and stores them in an array", () => {
+    transaction = new Transaction("date", "credit", "debit", "balance");
+    expect(transaction.singleTransaction.length).toEqual(4);
+    expect(transaction.singleTransaction).toEqual(
+      expect.arrayContaining(["date", "credit", "debit", "balance"])
+    );
   });
 });
