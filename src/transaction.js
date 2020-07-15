@@ -6,6 +6,14 @@ class Transaction {
     this.balance = balance;
   }
 
+  returnSingleTransaction() {
+    let date = this._returnDate();
+    let credit = this._returnCredit();
+    let debit = this._returnDebit();
+    let balance = this._returnBalance();
+    return `${date} || ${credit} || ${debit} || ${balance}`;
+  }
+
   _returnDate() {
     return this.date;
   }
@@ -20,10 +28,6 @@ class Transaction {
 
   _returnBalance() {
     return this.balance;
-  }
-
-  returnSingleTransaction() {
-    return this.singleTransaction;
   }
 }
 
