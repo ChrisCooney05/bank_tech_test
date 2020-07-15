@@ -3,15 +3,22 @@ const Transaction = require("../transaction");
 describe("Transaction", () => {
   let transaction;
 
-  test("takes 4 arguments on construction and interpolates them into a string", () => {
+  beforeEach(() => {
     transaction = new Transaction("date", "credit", "debit", "balance");
-    expect(transaction.singleTransaction).toEqual(
-      "date || credit || debit || balance"
-    );
+  });
+
+  test("takes 4 arguments on construction and stores them in variables", () => {
+    expect(transaction.date).toEqual("date");
+    expect(transaction.credit).toEqual("credit");
+    expect(transaction.debit).toEqual("debit");
+    expect(transaction.balance).toEqual("balance");
+  });
+
+  test("Has a method to return the date", () => {
+    expect(transaction.returnDate()).toEqual("date");
   });
 
   test("Returns a formatted string when called", () => {
-    transaction = new Transaction("date", "credit", "debit", "balance");
     expect(transaction.returnSingleTransaction()).toEqual(
       "date || credit || debit || balance"
     );
