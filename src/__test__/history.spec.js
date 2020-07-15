@@ -46,4 +46,18 @@ describe("History", () => {
   test("Has a method to convert number to string with two decimal places", () => {
     expect(history._formatInteger(1000)).toEqual("1000.00");
   });
+
+  test("There is a way to retrieve a full history and log it", () => {
+    console.log = jest.fn();
+    jest
+      .spyOn(history, "pushStatementToArray")
+      .mockImplementation(() => [
+        `\n${date} || 1000.00 ||  || 1000.00`,
+        `\n${date} ||  || 250.00 || 750.00`,
+      ]);
+    history.logStatement();
+    expect(console.log).toHaveBeenCalledWith(
+      `Date || Credit || Debit || Balance\n${date} || 1000.00 ||  || 1000.00\n${date} ||  || 250.00 || 750.00`
+    );
+  });
 });

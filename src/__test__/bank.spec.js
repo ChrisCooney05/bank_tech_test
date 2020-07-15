@@ -62,17 +62,4 @@ describe("Bank", () => {
     const historyMock = History.mock.instances[0].logStatement;
     expect(historyMock).toHaveBeenCalledTimes(1);
   });
-
-  test("There is a way to retrieve a full history through the Bank class formatted correctly", () => {
-    bank = new Bank();
-    console.log = jest.fn();
-    jest.spyOn(bank, "_returnHistory").mockImplementation(() => [
-      [date, "1000.00", "", "1000.00"],
-      [date, "", "250.00", "750.00"],
-    ]);
-    bank.statement();
-    expect(console.log).toHaveBeenCalledWith(
-      `Date || Credit || Debit || Balance\n${date} || 1000.00 ||  || 1000.00\n${date} ||  || 250.00 || 750.00`
-    );
-  });
 });

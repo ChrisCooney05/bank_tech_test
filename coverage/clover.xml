@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594795717042" clover="3.2.0">
-  <project timestamp="1594795717042" name="All files">
+<coverage generated="1594796257796" clover="3.2.0">
+  <project timestamp="1594796257796" name="All files">
     <metrics statements="45" coveredstatements="45" conditionals="1" coveredconditionals="1" methods="16" coveredmethods="16" elements="62" coveredelements="62" complexity="0" loc="45" ncloc="45" packages="1" files="3" classes="3"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
       <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="6" count="7" type="stmt"/>
-      <line num="7" count="7" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
       <line num="11" count="4" type="stmt"/>
       <line num="15" count="2" type="stmt"/>
       <line num="16" count="2" type="stmt"/>
@@ -27,8 +27,8 @@
     <file name="history.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/history.js">
       <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <line num="2" count="2" type="stmt"/>
-      <line num="5" count="5" type="stmt"/>
-      <line num="6" count="5" type="stmt"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
       <line num="10" count="2" type="stmt"/>
       <line num="11" count="2" type="stmt"/>
       <line num="12" count="2" type="stmt"/>
@@ -44,9 +44,9 @@
       <line num="31" count="1" type="stmt"/>
       <line num="32" count="1" type="stmt"/>
       <line num="34" count="1" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
-      <line num="39" count="1" type="stmt"/>
-      <line num="40" count="1" type="stmt"/>
+      <line num="38" count="2" type="stmt"/>
+      <line num="39" count="2" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
       <line num="44" count="7" type="stmt"/>
       <line num="48" count="2" type="stmt"/>
     </file>
