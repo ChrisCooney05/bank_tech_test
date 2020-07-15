@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/ChrisCooney05/bank_tech_test?branch=master)](https://bettercodehub.com/)
+
 # Bank Tech Test
 
 [Challenge outline](CHALLENGE.md)
