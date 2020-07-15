@@ -36,13 +36,11 @@ describe("History", () => {
     expect(Transaction).toHaveBeenCalledTimes(1);
   });
 
-  test("Returns full transaction history as an array of arrays", () => {
+  test("Calls function on Transaction class to get back a line of transaction history", () => {
     history.deposit(date, 1000, 1000);
-    history.withdraw(date, 250, 750);
-    expect(history.returnTransactionHistory()).toEqual([
-      [date, "1000.00", "", "1000.00"],
-      [date, "", "250.00", "750.00"],
-    ]);
+    history.returnStatement();
+    let mockTransaction = Transaction.mock.instances[0].returnSingleTransaction;
+    expect(mockTransaction).toHaveBeenCalledTimes(1);
   });
 
   test("Has a method to convert number to string with two decimal places", () => {

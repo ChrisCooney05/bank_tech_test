@@ -3,6 +3,7 @@ const Transaction = require("./transaction");
 class History {
   constructor() {
     this.transactions = [];
+    this.STATEMENT_HEADER = "Date || Credit || Debit || Balance";
   }
 
   deposit(date, funds, balance) {
@@ -19,8 +20,24 @@ class History {
     this.transactions.unshift(singleTransaction);
   }
 
-  returnTransactionHistory() {
+  _returnTransactionHistory() {
     return this.transactions;
+  }
+
+  pushStatementToArray() {
+    let result = [];
+    let fullHistory = this._returnTransactionHistory();
+    fullHistory.forEach((t) => {
+      let transaction = t.returnSingleTransaction();
+      result.push(`\n${transaction}`);
+    });
+    return result;
+  }
+
+  logStatement() {
+    let result = this.pushStatementToArray();
+    result = result.join("");
+    console.log(`${this.STATEMENT_HEADER}${result}`);
   }
 
   _formatInteger(integer) {
