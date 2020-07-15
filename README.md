@@ -47,6 +47,12 @@ bank.statement()
 
 For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.
 
-I decided to go with two classes, one to represent the Bank and one to hold the transaction history.
-The Bank class is the main controller where a user can deposit, withdraw and request statements, it also tracks the current balance.
-The History class is responsible for storing arrays with information regarding transactions. The user just needs to specify how much is being withdrawn or deposited and the program does the rest (captures a date stamp, formats the input so we have a number with two decimal places and formats the array input accordingly).
+
+I decided to go with three classes:
+
+Bank: This is controller class that the user will interface with. This class is responsible for receiving user input(funds), updating the balance accordingly and producing a snapshot of the current date.
+Once we have this information we pass it to the next class, History.
+
+History: This class is responsible for formatting some of the inputs and holding the full transaction history. On receipt of a deposit or withdrawal, the number is formatted into a string with two decimal places. it is also responsible to displaying a copy of the statement when requested by the user. Once all the information has been formatted it is stored in an instance of my next class, Transaction
+
+Transaction: This class is here just to help keep things neat, instead of an array of arrays each instance of transaction holds a string. all arguments passed in are interpolated into a string and stored ready to be retrieved when needed.
