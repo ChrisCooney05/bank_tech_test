@@ -9,14 +9,17 @@ class History {
   deposit(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
-    let singleTransaction = new Transaction(date, fundsFloat, "", balanceFloat);
-    this.transactions.unshift(singleTransaction);
+    this._makeTransactionInstance(date, fundsFloat, "", balanceFloat);
   }
 
   withdraw(date, funds, balance) {
     let fundsFloat = this._formatInteger(funds);
     let balanceFloat = this._formatInteger(balance);
-    let singleTransaction = new Transaction(date, "", fundsFloat, balanceFloat);
+    this._makeTransactionInstance(date, "", fundsFloat, balanceFloat);
+  }
+
+  _makeTransactionInstance(date, credit, debit, balance) {
+    let singleTransaction = new Transaction(date, credit, debit, balance);
     this.transactions.unshift(singleTransaction);
   }
 
