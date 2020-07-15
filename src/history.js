@@ -20,7 +20,7 @@ class History {
 
   _makeTransactionInstance(date, credit, debit, balance) {
     let singleTransaction = new Transaction(date, credit, debit, balance);
-    this.transactions.unshift(singleTransaction);
+    this.transactions.push(singleTransaction);
   }
 
   _returnTransactionHistory() {
@@ -29,7 +29,7 @@ class History {
 
   _pushStatementToArray() {
     let result = [];
-    let fullHistory = this._returnTransactionHistory();
+    let fullHistory = this._returnTransactionHistory().reverse();
     fullHistory.forEach((t) => {
       let transaction = t.returnSingleTransaction();
       result.push(`\n${transaction}`);
