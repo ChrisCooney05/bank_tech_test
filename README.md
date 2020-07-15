@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/ChrisCooney05/bank_tech_test?branch=master)](https://bettercodehub.com/)
+
 # Bank Tech Test
 
 [Challenge outline](CHALLENGE.md)
@@ -45,7 +47,7 @@ bank.statement()
 
 ## My approach
 
-**For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.
+**For this challenge, I focused on producing good code quality and making sure all the tests were mocking and stubbing correctly.**
 
 
 I decided to go with three classes:
