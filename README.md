@@ -32,6 +32,7 @@ If you would like to try the code in the console:
 
 ```
 npm install
+cd src
 node
 .load bank_node.js
 ```
@@ -39,6 +40,7 @@ node
 This will load up the REPL and load the bank file, you can then use the following commands to use the bank.
 
 ```
+const bank = new Bank()
 bank.deposit(add_number_here)
 bank.withdraw(add_number_here)
 bank.statement()

@@ -8,8 +8,8 @@ describe("Bank", () => {
     let t = new Date();
     let dd = t.getDate();
     let mm = t.getMonth() + 1;
-    let yy = t.getFullYear();
-    return `${dd}/${mm}/${yy}`;
+    let yyyy = t.getFullYear();
+    return `${dd}/${mm}/${yyyy}`;
   }
 
   beforeEach(() => {
