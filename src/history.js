@@ -27,7 +27,7 @@ class History {
     let result = [];
     let fullHistory = this.transactions.reverse();
     fullHistory.forEach((t) => {
-      let transaction = t.returnSingleTransaction();
+      let transaction = t.toString();
       result.push(`\n${transaction}`);
     });
     return result;

@@ -39,7 +39,7 @@ describe("History", () => {
   test("Calls function on Transaction class to get back a line of transaction history", () => {
     history.deposit(date, 1000, 1000);
     history.logStatement();
-    let mockTransaction = Transaction.mock.instances[0].returnSingleTransaction;
+    let mockTransaction = Transaction.mock.instances[0].toString;
     expect(mockTransaction).toHaveBeenCalledTimes(1);
   });
 

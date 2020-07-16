@@ -6,7 +6,7 @@ class Transaction {
     this.balance = balance;
   }
 
-  returnSingleTransaction() {
+  toString() {
     let date = this._returnDate();
     let credit = this._returnCredit();
     let debit = this._returnDebit();
