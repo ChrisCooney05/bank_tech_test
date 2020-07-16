@@ -6,17 +6,9 @@ describe("History", () => {
   let history;
   let date;
 
-  function getDate() {
-    let t = new Date();
-    let dd = t.getDate();
-    let mm = t.getMonth() + 1;
-    let yyyy = t.getFullYear();
-    return `${dd}/${mm}/${yyyy}`;
-  }
-
   beforeEach(() => {
     history = new History();
-    date = getDate();
+    date = "02/02/2020";
     Transaction.mockClear();
   });
 
