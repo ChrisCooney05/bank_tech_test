@@ -57,7 +57,7 @@ describe("History", () => {
       ]);
     history.logStatement();
     expect(console.log).toHaveBeenCalledWith(
-      `Date || Credit || Debit || Balance\n${date} || 1000.00 ||  || 1000.00\n${date} ||  || 250.00 || 750.00`
+      `date || credit || debit || balance\n${date} || 1000.00 ||  || 1000.00\n${date} ||  || 250.00 || 750.00`
     );
   });
 });

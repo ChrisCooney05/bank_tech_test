@@ -3,7 +3,7 @@ const Transaction = require("./transaction");
 class History {
   constructor() {
     this.transactions = [];
-    this.STATEMENT_HEADER = "Date || Credit || Debit || Balance";
+    this.STATEMENT_HEADER = "date || credit || debit || balance";
   }
 
   deposit(date, funds, balance) {
@@ -23,13 +23,9 @@ class History {
     this.transactions.push(singleTransaction);
   }
 
-  _returnTransactionHistory() {
-    return this.transactions;
-  }
-
   _pushStatementToArray() {
     let result = [];
-    let fullHistory = this._returnTransactionHistory().reverse();
+    let fullHistory = this.transactions.reverse();
     fullHistory.forEach((t) => {
       let transaction = t.returnSingleTransaction();
       result.push(`\n${transaction}`);
