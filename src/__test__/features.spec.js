@@ -17,7 +17,7 @@ describe("Bank", () => {
     date = getDate();
   });
 
-  test("User can depost money in the bank", () => {
+  test("User can deposit money in the bank", () => {
     bank.deposit(1000);
     expect(bank.currentBalance()).toEqual(1000);
   });
