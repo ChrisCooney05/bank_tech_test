@@ -7,27 +7,11 @@ class Transaction {
   }
 
   toString() {
-    let date = this._returnDate();
-    let credit = this._returnCredit();
-    let debit = this._returnDebit();
-    let balance = this._returnBalance();
+    let date = this.date;
+    let credit = this.credit;
+    let debit = this.debit;
+    let balance = this.balance;
     return `${date} || ${credit} || ${debit} || ${balance}`;
-  }
-
-  _returnDate() {
-    return this.date;
-  }
-
-  _returnCredit() {
-    return this.credit;
-  }
-
-  _returnDebit() {
-    return this.debit;
-  }
-
-  _returnBalance() {
-    return this.balance;
   }
 }
 

@@ -14,22 +14,6 @@ describe("Transaction", () => {
     expect(transaction.balance).toEqual("balance");
   });
 
-  test("Has a method to return the date", () => {
-    expect(transaction._returnDate()).toEqual("date");
-  });
-
-  test("Has a method to return the credit", () => {
-    expect(transaction._returnCredit()).toEqual("credit");
-  });
-
-  test("Has a method to return the debit", () => {
-    expect(transaction._returnDebit()).toEqual("debit");
-  });
-
-  test("Has a method to return the balance", () => {
-    expect(transaction._returnBalance()).toEqual("balance");
-  });
-
   test("Returns a formatted string when called", () => {
     expect(transaction.toString()).toEqual(
       "date || credit || debit || balance"
