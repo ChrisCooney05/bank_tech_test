@@ -24,13 +24,11 @@ class History {
   }
 
   _pushStatementToArray() {
-    let result = [];
     let fullHistory = this.transactions.reverse();
-    fullHistory.forEach((t) => {
+    return fullHistory.map((t) => {
       let transaction = t.toString();
-      result.push(`\n${transaction}`);
+      return `\n${transaction}`;
     });
-    return result;
   }
 
   logStatement() {

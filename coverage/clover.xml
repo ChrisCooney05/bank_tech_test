@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594895415328" clover="3.2.0">
-  <project timestamp="1594895415329" name="All files">
-    <metrics statements="55" coveredstatements="55" conditionals="1" coveredconditionals="1" methods="20" coveredmethods="20" elements="76" coveredelements="76" complexity="0" loc="55" ncloc="55" packages="1" files="3" classes="3"/>
+<coverage generated="1594969336252" clover="3.2.0">
+  <project timestamp="1594969336252" name="All files">
+    <metrics statements="53" coveredstatements="53" conditionals="1" coveredconditionals="1" methods="20" coveredmethods="20" elements="74" coveredelements="74" complexity="0" loc="53" ncloc="53" packages="1" files="3" classes="3"/>
     <file name="bank.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/bank.js">
       <metrics statements="19" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
       <line num="2" count="2" type="stmt"/>
@@ -25,7 +25,7 @@
       <line num="41" count="2" type="stmt"/>
     </file>
     <file name="history.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/history.js">
-      <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <line num="2" count="3" type="stmt"/>
       <line num="5" count="9" type="stmt"/>
       <line num="6" count="9" type="stmt"/>
@@ -39,15 +39,13 @@
       <line num="23" count="8" type="stmt"/>
       <line num="27" count="2" type="stmt"/>
       <line num="28" count="2" type="stmt"/>
-      <line num="29" count="2" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
       <line num="30" count="3" type="stmt"/>
-      <line num="31" count="3" type="stmt"/>
-      <line num="33" count="2" type="stmt"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="36" count="3" type="stmt"/>
       <line num="37" count="3" type="stmt"/>
-      <line num="38" count="3" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
-      <line num="43" count="17" type="stmt"/>
-      <line num="47" count="3" type="stmt"/>
+      <line num="41" count="17" type="stmt"/>
+      <line num="45" count="3" type="stmt"/>
     </file>
     <file name="transaction.js" path="/Users/chriscooney/projects/makers/Week_10/bank_tech_test/src/transaction.js">
       <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
